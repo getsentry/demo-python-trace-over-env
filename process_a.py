@@ -22,7 +22,7 @@ def main():
         my_env["SENTRY_TRACE"] = sentry_sdk.get_traceparent()
         my_env["SENTRY_BAGGAGE"] = sentry_sdk.get_baggage()
      
-        # Start process B Sentry environment variables
+        # Start process B with Sentry environment variables set
         process = Popen(
             ['python', 'process_b.py'], 
             stdout=PIPE, 
